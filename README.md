@@ -16,6 +16,7 @@ The app should run on localhost:3000. Visit the different endpoints, i.e.
 to generate stats.
 
 Visit http://localhost:3000/swagger-stats/ux to view stats.
+Visit http://localhost:3000/swagger-stats/metrics to view prometheus metrics.
 
 
 ![Dashboard screenshot](/screenshot.png?raw=true "Dashboard screenshot")
