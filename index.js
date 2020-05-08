@@ -9,6 +9,11 @@ app.get('/', (req, res) => res.send('Hello world'));
 app.get('/good-service-1', (req, res) => res.status(200).send('Successful response from good service'));
 app.get('/good-service-2', (req, res) => res.status(200).send('Successful response from good service 2'));
 app.get('/bad-service', (req, res) => res.status(500).send('Error on bad service'));
+app.get('/unstable-service', (req, res) => {
+    if (Math.random() > 0.5)
+        return res.sendStatus(500);
+    return res.sendStatus(200);
+});
 app.get('/unknown-service', (req, res) => res.status(404).send('Unknown service not found'));
 
 app.listen(port, () => 
