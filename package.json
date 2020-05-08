@@ -1,7 +1,7 @@
 {
-  "name": "swagger-stats-sandbox",
+  "name": "swagger-stats-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple demo of swagger-stats on express app.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,9 +9,10 @@
   "keywords": [
     "swagger-stats"
   ],
-  "author": "",
+  "author": "Kristian Hestetun",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "swagger-stats": "^0.95.17"
   }
 }
