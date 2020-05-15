@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 
 # Install app depdendencies
 COPY package.json yarn.lock ./
-RUN npm install
+RUN yarn install
 
 # Bundle app source
 COPY . .

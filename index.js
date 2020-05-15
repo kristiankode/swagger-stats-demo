@@ -36,8 +36,8 @@ const replyRandomly = (errorRate) => (req, res) => {
     return replyError(req, res);
     return replySuccess(req, res);
 }
-const replyLate = delay => replyFunc => {
-    setTimeout(() => replyFunc, delay);
+const replyLate = delay => replyHandler => {
+    return (req, res) => setTimeout(() => replyHandler(req, res), delay);
 };
 
 app.get('/', (req, res) => res.send('app-with-metrics\n' + links));
@@ -47,4 +47,4 @@ app.get('/unstable-service', replyRandomly(0.5));
 app.get('/slow-service', replyLate(1000)(replyRandomly(0.3)));
 
 app.listen(port, () => 
-console.log(`App listening at http://localhost:${port}.`));
+    console.log(`App listening at http://localhost:${port}.`));
