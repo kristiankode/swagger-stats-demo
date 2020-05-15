@@ -1,13 +1,15 @@
 {
-  "name": "swagger-stats-demo",
+  "name": "app-with-metrics",
   "version": "1.0.0",
-  "description": "Simple demo of swagger-stats on express app.",
+  "description": "Simple demo of swagger-stats and express-prom-bundle on express app.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "swagger-stats"
+    "swagger-stats",
+    "express-prom-bundle",
+    "demo"
   ],
   "author": "Kristian Hestetun",
   "license": "ISC",
